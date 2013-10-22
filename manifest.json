@@ -1,27 +1,19 @@
 {
-  "name": "Jupiter Broadcasting Affiliate Redirect",
-  "version": "0.9.2",
+  "name": "TeknoCratik Affiliate Redirect",
+  "version": "0.5",
   "manifest_version": 2,
-  "description": "Redirects links on JB affiliate sites to be tagged with the JB affiliate codes automagically!",
+  "description": "Automatically redirects links on TeknoCratik affiliated sites to be tagged with our codes! This is based on the JB extension.",
   "page_action" :
   {
-    "default_icon" : "icon128.png",
-    "default_title" : "With this purchase you are supporting Jupiter Broadcasting!"
+    "default_icon" : "icon2.png",
+    "default_title" : "With this purchase you are supporting the TeknoCratik Podcast! Thanks!"
   },
-  "icons": { "128": "icon128.png" },
+  "icons": { "icon2": "icon2.png" },
   "permissions": [  "webRequest", "webRequestBlocking", 
                       "*://*.amazon.com/*",
                       "*://*.amazon.co.uk/*",
                       "*://*.amazon.de/*",
-                      "*://*.amazon.ca/*",
-                      "*://*.audible.com/*",
-                      "*://*.mint.com/*",
-                      "*://*.bestbuy.com/*",
-                      "*://*.thinkgeek.com/*",
-                      "*://*.newegg.com/*",
-                      "*://*.newegg.ca/*",
-                      "*://*.guitarcenter.com/*",
-                      "*://*.woot.com/*",
+                      "*://*.amazon.fr/*",
 		      "tabs"
                  ], 
 	"background": {
