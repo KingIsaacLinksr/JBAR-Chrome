@@ -4,11 +4,12 @@ ReadMe
 General Info
 -------
 
-This plugin was created by rikai for use by [Jupiter Broadcasting](http://www.jupiterbroadcasting.com/). 
+This plugin was forked by kingisaaclinksr for use by [TeknoCratik](http://www.dangelus.com/teknocratik/). 
 
 I've forked it for use by the TeknoCratik blog and podcast. 
 
 In short, what it does is apply affiliate codes to the relevant urls of a user that has chosen to use this plugin.
+Based off of the Jupiter Broadcasting Extension. 
 
 
 
