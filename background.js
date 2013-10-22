@@ -1,108 +1,35 @@
     //              // source URL                                     // resulting url
-    // audible      // http://www.dpbolvw.net/click-4897915-10298646  // http://www.audible.com/?source_code=COMA0230WS012110&AID=10298646&PID=4897915  
-    // mint         // http://www.tkqlhce.com/click-4897915-10789102  // https://www.mint.com/?PID=4897915&priorityCode=4216102399&source=cj_pfm
-    // bestbuy      // http://www.jdoqocy.com/click-4897915-10483113  // http://www.bestbuy.com/?AID=10483113&PID=4897915&ref=39&CJPID=4897915&loc=01
-    // thinkgeek    // http://www.kqzyfj.com/click-4897915-10784884   // http://www.thinkgeek.com/index.shtml?cpg=cj&ref=&CJURL=&CJID=3282554
-    // newegg       // http://www.dpbolvw.net/click-4897915-10440554  // http://www.newegg.com/index.aspx?nm_mc=AFC-C8Junction&cm_mmc=AFC-C8Junction-_-Branding-_-na-_-na&AID=10440554&PID=4897915
-    // amazonuk     // http://www.amazon.co.uk/?tag=jupitebroadc-21  
-    // amazon       // http://www.amazon.com/?tag=thelinactsho-20
-    // amazon       // http://www.amazon.de/?tag=jupitebroad02-21
-    // guitarcenter // http://www..guitarcenter.com/?CJAID=10453836&CJPID=4897915
+    // amazonuk     // http://www.amazon.co.uk/?tag=tekno09-20
+    // amazon       // http://www.amazon.com/?tag=tekno-21
+    // amazon       // http://www.amazon.de/?tag=tekno03-21
+    // amazonfr     // http://www.amazon.fr/?tag=tekno0b-21
     // NOTE:  Once this is finalized, you might want to STRINK/ofuscate this some how.  
 
 var configurations = {
       amazon : {
         rx: /^http.*?\.amazon\.com.*?(\/dp\/|\/o\/asin\/|\/exec\/obidos\/tg\/detail\/|\/gp\/product\/)/i,
         params: [
-          { param: "tag", paramValue: "thelinactsho-20" }
+          { param: "tag", paramValue: "tekno09-20" }
         ]
       },
       amazonuk : {
        rx: /^http.*?\.amazon\.co\.uk.*?(\/dp\/|\/o\/asin\/|\/exec\/obidos\/tg\/detail\/|\/gp\/product\/)/i,
        params: [
-         { param: "tag", paramValue: "jupitebroadc-21" }
+         { param: "tag", paramValue: "tekno-21" }
        ]
       },
       amazonde : { 
         rx: /^http.*?\.amazon\.de.*?(\/dp\/|\/o\/asin\/|\/exec\/obidos\/tg\/detail\/|\/gp\/product\/)/i,
         params: [
-          { param: "tag", paramValue: "jupitebroad02-21" }
+          { param: "tag", paramValue: "tekno03-21" }
         ]
       },
-      amazonca : { 
-        rx: /^http.*?\.amazon\.ca.*?(\/dp\/|\/o\/asin\/|\/exec\/obidos\/tg\/detail\/|\/gp\/product\/)/i,
+      amazonfr : { 
+        rx: /^http.*?\.amazon\.fr.*?(\/dp\/|\/o\/asin\/|\/exec\/obidos\/tg\/detail\/|\/gp\/product\/)/i,
         params: [
-          { param: "tag", paramValue: "jbcanada-20" }
+          { param: "tag", paramValue: "tekno0b-21" }
         ]
       },
-      audible : { 
-        rx: /^http.*?\.audible\.com.*?\/pd\/.*/i,
-        params: [
-          { param: "source_code", paramValue: "COMA0230WS012110" },
-          { param: "AID", paramValue: "10298646" },
-          { param: "PID", paramValue: "4897915" }
-        ]
-      },
-      mint : { 
-        rx: /^http.*?\.mint\.com/i, 
-        params: [
-          { param: "PID", paramValue: "4897915" },
-          { param: "priorityCode", paramValue: "4216102399" },
-          { param: "source", paramValue: "cj_pfm" }
-        ]
-      },
-      bestbuy : {
-       rx: /^http.*?\.bestbuy\.com.*?site.*?\?id=/i, 
-       params: [
-         { param: "AID", paramValue: "10483113" },
-         { param: "PID", paramValue: "4897915" },
-         { param: "ref", paramValue: "39" },
-         { param: "CJPID", paramValue: "4897915" },
-         { param: "loc", paramValue: "01" }
-       ]
-      },
-      thinkgeek : { 
-        rx: /^http.*?\.thinkgeek\.com\/product\//i, 
-        params: [
-          { param: "cpg", paramValue: "cj" },
-          { param: "ref", paramValue: "" },
-          { param: "CJURL", paramValue: "" },
-          { param: "CJID", paramValue: "3282554"}
-        ]
-      },
-      neweggcom : {
-       rx: /^http.*?\.newegg\.com.*?(product.product\.aspx\?item=|special.shellshocker\.aspx\?)/i,
-       params: [
-         { param: "nm_mc", paramValue: "AFC-C8Junction" },
-         { param: "cm_mmc", paramValue: "AFC-C8Junction-_-Branding-_-na-_-na" },
-         { param: "AID", paramValue: "10440554" },
-         { param: "PID", paramValue: "4897915" }
-       ]
-      },
-      neweggca : {
-       rx: /^http.*?\.newegg\.ca.*?\/(product.product\.aspx\?item=|special.shellshocker\.aspx\?)/i,
-       params: [
-         { param: "nm_mc", paramValue: "AFC-C8junctionCA" },
-         { param: "cm_mmc", paramValue: "AFC-C8JunctionCA-_-homepage-_-na-_-na" },
-         { param: "AID", paramValue: "10606701" },
-         { param: "PID", paramValue: "4897915" }
-       ]
-      },
-      woot : {
-       rx: /^http.*?\.woot\.com.*?\/offers\/.*/i,
-       params: [
-         { param: "utm_campaign", paramValue: "Commission+Junction+-+10848750" },
-         { param: "utm_source", paramValue: "Commission+Junction+Publisher+-+4897915" },
-         { param: "utm_medium", paramValue: "affiliate+-+Woot%21+Logo" }
-       ]
-      },
-      guitarcenter : {
-        rx: /^http.*?\.guitarcenter\.com\/.*[a-z0-9]{9}-i[a-z0-9]{7}\.gc/i, 
-        params: [
-          { param: "CJAID", paramValue: "10453836" },
-          { param: "CJPID", paramValue: "4897915" }
-        ]
-      }
     };
     
     function addTag(info) {
@@ -167,21 +94,11 @@ var configurations = {
             "http://*.amazon.de/exec/obidos/tg/detail/*",
             "http://*.amazon.de/gp/product/*",
             "http://*.amazon.de/o/*",
-            "http://*.amazon.ca/*/dp/*",
-            "http://*.amazon.ca/dp/*",
-            "http://*.amazon.ca/exec/obidos/tg/detail/*",
-            "http://*.amazon.ca/gp/product/*",
-            "http://*.amazon.ca/o/*",
-            "http://*.audible.com/*",
-            "http://*.mint.com/*",
-            "http://*.bestbuy.com/site/*\?id=*",
-            "http://*.thinkgeek.com/*",
-            "http://*.newegg.com/Product/Product.aspx\?Item=*",
-            "http://*.newegg.com/Special/ShellShocker.aspx\?*",
-            "http://*.newegg.ca/Product/Product.aspx\?Item=*",
-            "http://*.newegg.ca/Special/ShellShocker.aspx\?*",
-            "http://*.guitarcenter.com/*",
-            "http://*.woot.com/*"
+            "http://*.amazon.fr/*/dp/*",
+            "http://*.amazon.fr/dp/*",
+            "http://*.amazon.fr/exec/obidos/tg/detail/*",
+            "http://*.amazon.fr/gp/product/*",
+            "http://*.amazon.fr/o/*",
     ];
   
     chrome.webRequest.onBeforeRequest.addListener(addTag, { urls: site_urls }, [ "blocking" ]); 
